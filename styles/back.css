@@ -1,13 +1,13 @@
 .background-containerblog {
   background-image: url('../images/ReserveBack.svg');
-  height: 60vh; /* Адаптивная высота: 60% от высоты экрана */
+  height: 60vh; 
   width: 100vw;
   position: relative;
   background-size: cover;
   background-position: center; /* Центрируем фон */
   background-repeat: no-repeat;
   opacity: 0.75;
-  z-index: -1;
+  z-index: -5;
 }
 
 .container {

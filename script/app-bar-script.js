@@ -1,11 +1,11 @@
-let lastScrollTop = 0;
-const appBar = document.querySelector('.app-bar-custom');
-window.addEventListener('scroll', function () {
-    let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-    if (currentScroll > lastScrollTop) {
-        appBar.style.top = '-80px';  
-    } else {
-        appBar.style.top = '0';
-    }
-    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; 
+document.addEventListener('DOMContentLoaded', () => {
+  // Находим элемент .app-bar-castom
+  const appBar = document.querySelector('.app-bar-castom');
+
+  // Проверяем, существует ли элемент
+  if (!appBar) {
+    console.error('Элемент .app-bar-castom не найден!');
+    return;
+  }
+
 });

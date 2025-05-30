@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Функция для изменения плейсхолдера
   window.changePlaceholder = function (input, newPlaceholder) {
     input.placeholder = newPlaceholder;
   };

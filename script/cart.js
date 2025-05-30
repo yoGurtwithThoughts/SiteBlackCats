@@ -1,3 +1,4 @@
+// Объявляем все переменные и функции глобально
 document.addEventListener('DOMContentLoaded', () => {
   // Глобальные переменные
   window.cartButton = document.getElementById('cart-button');
