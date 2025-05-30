@@ -1,0 +1,180 @@
+.reserve-section {
+  position: relative;
+  width: 100%;
+  height: 85vh;
+  padding: 5vh 5vw;
+  overflow: hidden;
+}
+
+.reserve-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: url('../images/ReserveBack.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.75;
+  z-index: 0;
+  pointer-events: none; /* очень важно, чтобы фон не блокировал клики */
+}
+
+.content-row {
+  position: relative;
+  z-index: 1; /* выше, чем фон */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 90vw;
+  margin: 0 auto;
+  padding: 4vh 3vw;
+}
+
+.image-col {
+  flex: 2;
+  max-width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: auto;
+  max-height: 65vh;
+  margin-bottom: 2vh;
+}
+
+.form-col {
+  flex: 1;
+  z-index: 4;
+  text-align: left;
+  margin-left: 3vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.form-wrapper {
+  width: 100%;
+  max-width: 80vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin-left: 4vw;
+}
+
+.form-field {
+  z-index: 5;
+  height: 7.5vh;
+  background: #FFFF;
+  border-radius: 2vh;
+  margin-top: 4vh;
+  display: flex;
+  align-items: center;
+  padding: 1.5vh 1vw;
+  position: relative;
+  width: 100%;
+}
+.form-field:first-child {
+  margin-top: 0; /* Чтобы у первого поля не было отступа сверху */
+}
+.form-field input {
+  width: 100%;
+  height: 100%;
+  padding: 1.5vh 1vw;
+  border: none;
+  border-radius: 2vh;
+  font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+  font-family: 'Bellota';
+  color: #9D8781;
+  outline: none;
+  box-shadow: none;
+  text-align: left;
+  border-color: transparent;
+  background-color: transparent; /* или оставить, если нужно */
+}
+
+.form-field input:focus {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.icon-form {
+  width: 2.5vw;
+  height: 2.5vw;
+  min-width: 24px;
+  min-height: 24px;
+  margin-right: 1.5vw;
+  margin-left: 1.5vw;
+  fill: #9D8781;
+  stroke: #9D8781;
+  stroke-width: 2;
+}
+
+/* Градиентный текст */
+.gradient-text {
+  position: absolute; 
+  top: -7%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 64px; 
+  font-family: 'Bellota'; 
+  font-weight: bold;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+}
+
+.first-word {
+  background: linear-gradient(to right, rgba(248, 228, 190, 1) 0%, rgba(255, 243, 224, 1) 100%); 
+  -webkit-background-clip: text; 
+  background-clip: text; 
+  margin-right: 10px;
+  -webkit-text-fill-color: transparent; 
+  z-index: 4;
+}
+
+.second-word {
+  background: linear-gradient(to right, rgba(255, 248, 232, 1) 0%, rgba(223, 195, 157, 1) 100%);
+  -webkit-background-clip: text; 
+  background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+  z-index: 4;
+}
+
+@font-face {
+  font-family: 'Bellota';
+  src: url(../fonts/Bellota-Regular.ttf) format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+  .form-field {
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+  .form-control {
+    width: 100%;
+    font-size: 1.25rem;
+    padding: 0.6rem 1rem;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    outline: none;
+    box-sizing: border-box;
+  }
+  .form-control.error {
+    border-color: #d9534f;
+  }
+  .error-message {
+    color: #d9534f;
+    font-size: 0.875rem;
+    margin-top: 0.3rem;
+    position: absolute;
+    left: 0;
+    bottom: -1.2rem;
+  }
